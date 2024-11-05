@@ -9,6 +9,8 @@ WISEST (Which Systematic Evidence Synthesis is besT) is an innovative tool desig
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [System Architecture](#system-architecture)
@@ -20,7 +22,6 @@ WISEST (Which Systematic Evidence Synthesis is besT) is an innovative tool desig
 - [License](#license)
 - [Contact](#contact)
 - [Changelog](#changelog)
-- [Dependencies](#dependencies)
 
 ## Overview
 The WISEST Annotation Platform reduces the cognitive burden on researchers and health practitioners by automating systematic review quality appraisals. This tool ensures faster, more consistent assessments and supports evidence-based decision-making. It integrates advanced deep learning models to provide automated responses aligned with the ROBIS and AMSTAR-2 frameworks.
@@ -32,36 +33,46 @@ The WISEST Annotation Platform reduces the cognitive burden on researchers and h
 - Facilitates systematic review annotation and evaluation in an organized manner.
 - Open-source for easy customization and further development.
 
-## Installation
-
-### Prerequisites
+## Prerequisites
 - **Docker** installed on your machine.
 - **Node.js** and **npm** for frontend development.
 - **Python 3.x** for backend development.
 
+## Requirements
+- **React**: 18.3.1 (or 18+)
+- **Docker**: 27.3.1
+- **Node.js**: 22.x
+- **Python**: 3.x
+
+## Installation
+
 ### Steps
 1. **Clone the repository**:
-
+    ```bash
     git clone https://github.com/radinhamidi/WISEST-Annotation-Platform.git
     cd WISEST-Annotation-Platform
+    ```
 
 2. **Run the app using Docker Compose**:
-
+    ```bash
     docker-compose up --build
+    ```
 
 3. **Manual setup (if needed)**:
    - Navigate to the `backend/` and `frontend/` directories and follow their `README.md` setup instructions.
 
 ## Usage
 1. **Start the backend server**:
-
+    ```bash
     cd backend
     python app.py
+    ```
 
 2. **Start the frontend**:
-
+    ```bash
     cd frontend
     npm start
+    ```
 
 3. **Access the platform**:
    Open your web browser and go to `http://localhost:3000` to start using the WISEST Annotation Platform.
@@ -69,14 +80,14 @@ The WISEST Annotation Platform reduces the cognitive burden on researchers and h
 ## System Architecture
 The WISEST Annotation Platform is composed of the following components:
 - **Frontend**: Built using React for an interactive and user-friendly interface.
-- **Backend**: Implemented in Python with Flask to handle data processing, annotations, and API requests.
+- **Backend**: Implemented in Python to handle data processing, annotations, and API requests.
 - **Database**: PostgreSQL is used to store user data and systematic review annotations.
 
 ## Technologies Used
-- **Frontend**: React, HTML, CSS, JavaScript
-- **Backend**: Python, Flask
+- **Frontend**: React 18.3.1, HTML, CSS, JavaScript
+- **Backend**: Python 3.x
 - **Database**: PostgreSQL
-- **Deployment**: Docker, Docker Compose
+- **Deployment**: Docker 27.3.1, Docker Compose
 - **Data Processing**: Pandas, NumPy
 
 ## Screenshots
@@ -95,7 +106,7 @@ Here is an example of the WISEST Annotation Platform interface:
 A: Follow the guidelines in the [Contributing](#contributing) section.
 
 **Q: What frameworks are required to run this project?**  
-A: Docker, Node.js, npm, and Python 3.x are needed.
+A: Docker 27.3.1, Node.js 22.x, npm, and Python 3.x are needed.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -110,15 +121,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 This project is licensed under the [Creative Commons Attribution-NonCommercial License (CC BY-NC)](https://creativecommons.org/licenses/by-nc/4.0/). See the [LICENSE](LICENSE) file for more details.
 
-
 ## Contact
 For any questions or issues, please reach out via [GitHub Issues](https://github.com/radinhamidi/WISEST-Annotation-Platform/issues).
 
 ## Changelog
 See the [CHANGELOG](CHANGELOG.md) for details on version updates and changes.
-
-## Dependencies
-- **Python**: 3.x
-- **Flask**: x.x.x
-- **React**: x.x.x
-- **Docker**: x.x.x
